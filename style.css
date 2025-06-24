@@ -24,7 +24,7 @@ body {
 
 /* Хедер */
 header {
-    background: #fff;
+    border-color: transparent;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 0;
@@ -32,7 +32,7 @@ header {
 }
 
 .header-top {
-    background: #f3f7f5;
+    background-color: transparent;
     padding: 6px 0;
     border-bottom: 1px solid #d9e6de;
 }
@@ -51,6 +51,7 @@ header {
     align-items: center;
     gap: 10px;
     font-weight: 500;
+    color: #2e7d32;
 }
 
 .contact-item i {
@@ -81,13 +82,13 @@ header {
 .logo-link {
     font-size: 16px;
     font-weight: bold;
-    color: #1b1b1b;
+    color: #2e7d32;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .logo-link:hover {
-    color: #2e7d32;
+    color: #27632a;
 }
 
 .search {
@@ -134,15 +135,15 @@ header {
 }
 
 .cart-icon:hover {
-    color: #1b3e16;
+    color: #27632a;
 }
 
 .cart-icon span {
     position: absolute;
     top: -8px;
     right: -10px;
-    background: #ff7043;
-    color: white;
+    background: white;
+    color: black;
     border-radius: 50%;
     width: 22px;
     height: 22px;
