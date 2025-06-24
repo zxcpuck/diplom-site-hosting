@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+<div class="checkout-container">
+    <h1>Оформлення замовлення</h1>
+    <div id="orderItems">
+        <!-- Товари будуть додані динамічно -->
+    </div>
+    <form id="orderForm">
+        <label for="customerName">Ім'я:</label>
+        <input type="text" id="customerName" name="customerName" required>
+
+        <label for="customerPhone">Телефон:</label>
+        <input type="tel" id="customerPhone" name="customerPhone" required>
+
+        <label for="customerAddress">Адреса (необов'язково):</label>
+        <input type="text" id="customerAddress" name="customerAddress">
+
+        <p>Загальна сума: <span id="totalPrice">0</span> грн</p>
+
+        <button type="submit">Відправити замовлення</button>
+    </form>
+</div>
+
+
+<script src="checkout.js"></script> <!-- Скрипт для обробки -->
+</body>
+</html>

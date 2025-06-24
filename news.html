@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новини</title>
+    <link rel="stylesheet" href="news-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <div class="contacts">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+380931234567">+38 (093) 123-45-67</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Пн-Пт: 8:00 - 20:00</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="https://goo.gl/maps/xyz" target="_blank">Львів</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-main" style="display: flex;align-items: center;justify-content: center;">
+        <a href="index.html" class="logo-link">
+            <h1>БудМаг 🏗️</h1>
+        </a>
+    </div>
+</header>
+<div class="news-container">
+    <div class="news-header">
+        <h1>Останні новини</h1>
+    </div>
+
+    <div class="news-item">
+        <div class="news-title">Новий асортимент інструментів!</div>
+        <div class="news-date">04 червня 2025</div>
+        <div class="news-content">Ми додали більше 50 нових інструментів у наш каталог! Завітайте, щоб знайти щось нове для ваших потреб.</div>
+    </div>
+
+    <div class="news-item">
+        <div class="news-title">Знижки на популярні товари!</div>
+        <div class="news-date">03 червня 2025</div>
+        <div class="news-content">Отримайте знижку до 30% на наші бестселери. Пропозиція дійсна до кінця місяця!</div>
+    </div>
+
+    <div class="news-item">
+        <div class="news-title">Оновлення сайту</div>
+        <div class="news-date">01 червня 2025</div>
+        <div class="news-content">Ми оновили дизайн нашого сайту, щоб зробити ваш досвід ще комфортнішим.</div>
+    </div>
+
+    <button class="toggle-btn">Показати всі новини</button>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Про нас</h3>
+            <ul>
+                <li><a href="our_team.html">Наша команда</a></li>
+                <li><a href="our_achievement.html">Наші досягнення</a></li>
+                <li><a href="reviews.html">Відгуки</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Для покупців</h3>
+            <ul>
+                <li><a href="product-delivery.html">Доставка товарів</a></li>
+                <li><a href="product-return.html">Повернення товару</a></li>
+                <!--                <li><a href="#">Постачальникам та партнерам</a></li>-->
+                <!--                <li><a href="#">Політика конфіденційності</a></li>-->
+                <!--                <li><a href="#">Договір публічної оферти</a></li>-->
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Корисна інформація</h3>
+            <ul>
+                <li><a href="Articles.html">Статті</a></li>
+                <li><a href="how_to_choise_tool.html">Як обрати інструмент</a></li>
+<!--                <li><a href="#">Розрахунок матеріалів</a></li>-->
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Наші соцмережі</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/?locale=uk_UA"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://web.telegram.org/"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Зворотній зв'язок</h3>
+            <form id="feedback-form">
+                <input type="email" id="user-email" placeholder="Ваш Email" required />
+                <button type="submit">Надіслати</button>
+            </form>
+            <p id="feedback-message" style="display: none;"></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>База будівельних матеріалів "БудМаг" © [2013-2025]. Всі права захищені.</p>
+    </div>
+</footer>
+
+<script src="news.js"> </script>
+</body>
+</html>

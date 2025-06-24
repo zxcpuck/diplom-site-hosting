@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Повернення товару | БудМаг</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="product-return.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="return-header">
+    <div class="header-wrapper">
+        <a href="index.html" class="logo-link">
+            <h1 class="logo"><i class="fas fa-home"></i> БудМаг</h1>
+        </a>
+
+        <div class="page-title">
+            <h1><i class="fas fa-exchange-alt"></i> Повернення товару</h1>
+            <p>Легкий та зручний процес повернення</p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <section class="return-steps">
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <h3><i class="fas fa-clipboard-check"></i> Заповніть форму</h3>
+            <p>Заповніть просту форму повернення, вказавши причину та деталі замовлення.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <h3><i class="fas fa-truck"></i> Відправте товар</h3>
+            <p>Отримайте інструкції щодо відправлення товару назад до нашого складу.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <h3><i class="fas fa-search"></i> Перевірка</h3>
+            <p>Ми перевіримо стан товару протягом 1-3 робочих днів після отримання.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">4</div>
+            <h3><i class="fas fa-money-bill-wave"></i> Повернення коштів</h3>
+            <p>Гроші будуть повернуті на вашу картку протягом 5 робочих днів після перевірки.</p>
+        </div>
+    </section>
+
+    <section class="return-form-container">
+        <h2 class="form-title"><i class="fas fa-file-alt"></i> Форма повернення товару</h2>
+
+        <form id="returnForm" class="return-form">
+            <div class="form-group">
+                <label for="returnReason">Причина повернення *</label>
+                <select id="returnReason" required>
+                    <option value="">Оберіть причину...</option>
+                    <option value="wrong">Товар не відповідає опису</option>
+                    <option value="broken">Товар пошкоджений</option>
+                    <option value="unsuitable">Товар не підійшов</option>
+                    <option value="other">Інша причина</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fullName">Повне ім'я *</label>
+                <input type="text" id="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон *</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="returnMethod">Спосіб повернення *</label>
+                <select id="returnMethod" required>
+                    <option value="">Оберіть спосіб...</option>
+                    <option value="nova_poshta">Нова Пошта</option>
+                    <option value="ukrposhta">Укрпошта</option>
+                    <option value="courier">Кур'єр</option>
+                    <option value="pickup">Самовивіз</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="details">Деталі повернення</label>
+                <textarea id="details" placeholder="Опишіть детальніше причину повернення..."></textarea>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Додаткові матеріали</label>
+                <div class="file-upload" id="fileUpload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Перетягніть фото тут або клацніть для завантаження</span>
+                    <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+                </div>
+                <div id="fileList" style="margin-top: 0.5rem;"></div>
+            </div>
+
+            <button type="submit" class="submit-btn">Відправити запит на повернення</button>
+        </form>
+    </section>
+
+    <section class="faq-section">
+        <h2><i class="fas fa-question-circle"></i> Поширені питання</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Який термін повернення товару?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Ви можете повернути товар протягом 14 днів з моменту отримання, якщо він не був у використанні та зберіг товарний вигляд.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Як довго триває процес повернення коштів?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Після отримання та перевірки товару ми повертаємо кошти протягом 5 робочих днів. Термін зарахування коштів на вашу картку залежить від вашого банку.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Чи можна повернути товар без чека?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Так, ми можемо прийняти товар без чека, якщо ви можете надати інші докази покупки (наприклад, номер замовлення або банківську транзакцію).</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Хто оплачує доставку при поверненні товару?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Якщо товар повертається через нашу помилку (неправильний або пошкоджений товар), ми компенсуємо вартість доставки. В інших випадках доставку оплачує покупець.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Про нас</h3>
+            <ul>
+                <li><a href="our_team.html">Наша команда</a></li>
+                <li><a href="our_achievement.html">Наші досягнення</a></li>
+                <li><a href="reviews.html">Відгуки</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Для покупців</h3>
+            <ul>
+                <li><a href="product-delivery.html">Доставка товарів</a></li>
+                <li><a href="product-return.html">Повернення товару</a></li>
+                <!--                <li><a href="#">Постачальникам та партнерам</a></li>-->
+                <!--                <li><a href="#">Політика конфіденційності</a></li>-->
+                <!--                <li><a href="#">Договір публічної оферти</a></li>-->
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Корисна інформація</h3>
+            <ul>
+                <li><a href="Articles.html">Статті</a></li>
+                <li><a href="how_to_choise_tool.html">Як обрати інструмент</a></li>
+<!--                <li><a href="#">Розрахунок матеріалів</a></li>-->
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Наші соцмережі</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/?locale=uk_UA"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://web.telegram.org/"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Зворотній зв'язок</h3>
+            <form id="feedback-form">
+                <input type="email" id="user-email" placeholder="Ваш Email" required />
+                <button type="submit">Надіслати</button>
+            </form>
+            <p id="feedback-message" style="display: none;"></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>База будівельних матеріалів "БудМаг" © [2013-2025]. Всі права захищені.</p>
+    </div>
+</footer>
+
+<script src="product-return.js"> </script>
+
+</body>
+</html>

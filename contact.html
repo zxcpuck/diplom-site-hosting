@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти | БудМаг</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <div class="contacts">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+380931234567">+38 (093) 123-45-67</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Пн-Пт: 8:00 - 20:00</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="https://goo.gl/maps/xyz" target="_blank">Львів</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-main">
+        <a href="index.html" class="logo-link">
+            <h1>БудМаг 🏗️</h1>
+        </a>
+    </div>
+</header>
+<section class="contacts-section">
+    <div class="contacts-container">
+        <h1>Контакти компанії "БудМаг"</h1>
+        <p class="subtitle">Завжди раді відповісти на ваші питання!</p>
+
+        <div class="contact-details">
+            <h2>Контактні телефони:</h2>
+            <p>
+                (093) 170-14-17 • (093) 170-86-45 • (095) 260-47-75 •<br>
+                (098) 864-80-44 • (095) 050-10-92 • (067) 532-91-35 •<br>
+                (067) 88-790-88 • (099) 49-175-29<br>
+                Email: <a href="mailto:info@magbug.in.ua">info@magbug.in.ua</a>
+            </p>
+
+            <h3>Відділ по роботі з юридичними особами:</h3>
+            <p>(050) 447-86-05 • (067) 533-27-88</p>
+
+            <h3>Постачальникам і партнерам:</h3>
+            <p>(050) 564-50-50</p>
+
+            <h3>Email адреси:</h3>
+            <p>
+                Відділ постачання: <a href="mailto:partner@magbug.in.ua">partner@magbug.in.ua</a><br>
+                Відділ логістики: <a href="mailto:logist@magbug.in.ua">logist@magbug.in.ua</a><br>
+                Відділ реклами: <a href="mailto:reklama@magbug.in.ua">reklama@magbug.in.ua</a>
+            </p>
+
+            <h3>Режим роботи відділу продаж:</h3>
+            <p>8:00 – 20:00 (без вихідних)</p>
+        </div>
+
+        <h2>Зворотній зв’язок</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Ваше ім'я" required>
+            <input type="email" id="email" placeholder="Ваш E-Mail" required>
+            <textarea id="message" placeholder="Ваші питання" required></textarea>
+            <button type="submit">Надіслати</button>
+        </form>
+
+
+        <button class="map-toggle-btn" onclick="toggleMap()">📍 Показати на карті</button>
+
+        <div id="map" class="map-container hidden">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2575.2539964960533!2d23.989961612105443!3d49.80009233385841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae7ba97e40c93%3A0x6208424af185a10!2z0LLRg9C70LjRhtGPINCG0LLQsNC90LAg0J_Rg9C70Y7RjywgNDIsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1750680134701!5m2!1suk!2sua"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Про нас</h3>
+            <ul>
+                <li><a href="our_team.html">Наша команда</a></li>
+                <li><a href="our_achievement.html">Наші досягнення</a></li>
+                <li><a href="reviews.html">Відгуки</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Для покупців</h3>
+            <ul>
+                <li><a href="product-delivery.html">Доставка товарів</a></li>
+                <li><a href="product-return.html">Повернення товару</a></li>
+                <!--                <li><a href="#">Постачальникам та партнерам</a></li>-->
+                <!--                <li><a href="#">Політика конфіденційності</a></li>-->
+                <!--                <li><a href="#">Договір публічної оферти</a></li>-->
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Корисна інформація</h3>
+            <ul>
+                <li><a href="Articles.html">Статті</a></li>
+                <li><a href="how_to_choise_tool.html">Як обрати інструмент</a></li>
+                <!--                <li><a href="#">Розрахунок матеріалів</a></li>-->
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Наші соцмережі</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/?locale=uk_UA"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://web.telegram.org/"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Зворотній зв'язок</h3>
+            <form id="feedback-form">
+                <input type="email" id="user-email" placeholder="Ваш Email" required />
+                <button type="submit">Надіслати</button>
+            </form>
+            <p id="feedback-message" style="display: none;"></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>База будівельних матеріалів "БудМаг" © [2013-2025]. Всі права захищені.</p>
+    </div>
+</footer>
+<script src="contact.js"></script>
+</body>
+</html>

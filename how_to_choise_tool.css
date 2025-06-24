@@ -1,0 +1,157 @@
+/* Загальний контейнер */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Заголовки */
+h1, h2 {
+    font-weight: 700;
+    color: #2e2e2e;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+/* Хедер */
+.header {
+    background: #f9f9f9;
+    padding: 20px 0;
+    border-bottom: 2px solid #4caf50;
+}
+
+.breadcrumbs {
+    font-size: 15px;
+    color: #666;
+    margin-top: 6px;
+}
+
+.breadcrumbs a {
+    color: #388e3c;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* Основний контент */
+.content {
+    padding: 40px 0 60px 0;
+    line-height: 1.6;
+    font-size: 17px;
+    color: #444;
+}
+
+.guide-section {
+    margin-bottom: 50px;
+}
+
+.guide-section ul {
+    list-style: disc inside;
+    margin-top: 15px;
+    color: #555;
+}
+
+.guide-section ul li {
+    margin-bottom: 12px;
+}
+
+/* Таблиця */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #4caf50;
+    color: white;
+}
+
+thead th {
+    padding: 14px 18px;
+    font-weight: 700;
+}
+
+tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f9f4;
+}
+
+/* Футер */
+.footer {
+    background: #2e7d32;
+    color: white;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 15px;
+}
+
+.footer-nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #a5d6a7;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    th, td {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .guide-section {
+        padding: 1rem;
+    }
+
+    #feedback-form {
+        width: 100%;
+    }
+
+    .social-icons a {
+        font-size: 1.25rem;
+    }
+}
