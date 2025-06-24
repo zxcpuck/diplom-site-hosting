@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyg_QGJs_2DeSYlsIWazYQOls1V__kq9Frl_Ksqu1DLm7Ldx44hhHcnjqxyzEiZYCF3zA/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQA72YdD1I7JsjCsk-AA22kAwsnOfUl3CGth6vLtqKz-KAU7Sx6JFLiJ44-RIcOGtv4A/exec';
 
 let reviews = [];
 
