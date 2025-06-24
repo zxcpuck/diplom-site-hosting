@@ -24,27 +24,26 @@ function renderReviews() {
     });
 }
 
-// Завантажити відгуки з Google Sheets
 async function fetchReviews() {
     try {
         const response = await fetch(GOOGLE_SCRIPT_URL);
-        const data = await response.json();
-        reviews = data;
+        if (!response.ok) throw new Error('Помилка при завантаженні відгуків');
+        reviews = await response.json();
         renderReviews();
     } catch (error) {
-        console.error('Помилка при завантаженні відгуків:', error);
+        console.error(error);
         reviewsContainer.innerHTML = '<p>Не вдалося завантажити відгуки.</p>';
     }
 }
 
-reviewForm.addEventListener('submit', async function (e) {
+reviewForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = nameInput.value.trim();
     const comment = commentInput.value.trim();
 
     if (!name || !comment) {
-        alert("Будь ласка, заповніть обидва поля.");
+        alert('Будь ласка, заповніть обидва поля.');
         return;
     }
 
@@ -54,7 +53,7 @@ reviewForm.addEventListener('submit', async function (e) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, comment })
         });
-
+        if (!response.ok) throw new Error('Помилка при відправці відгуку');
         const result = await response.json();
 
         if (result.result === 'success') {
@@ -63,20 +62,19 @@ reviewForm.addEventListener('submit', async function (e) {
             reviewForm.reset();
 
             const msg = document.createElement('p');
-            msg.textContent = "✅ Ваш відгук успішно надіслано!";
-            msg.style.color = "green";
+            msg.textContent = '✅ Ваш відгук успішно надіслано!';
+            msg.style.color = 'green';
             reviewForm.appendChild(msg);
             setTimeout(() => msg.remove(), 3000);
 
             reviewsContainer.scrollTop = reviewsContainer.scrollHeight;
         } else {
-            alert('Помилка при додаванні відгуку: ' + result.message);
+            alert('Помилка: ' + result.message);
         }
     } catch (error) {
         alert('Помилка мережі. Спробуйте пізніше.');
+        console.error(error);
     }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-    fetchReviews();
-});
+window.addEventListener('DOMContentLoaded', fetchReviews);
