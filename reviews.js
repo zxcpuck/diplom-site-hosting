@@ -50,9 +50,10 @@ reviewForm.addEventListener('submit', async (e) => {
     try {
         const response = await fetch(GOOGLE_SCRIPT_URL, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'text/plain' },
             body: JSON.stringify({ name, comment })
         });
+
         if (!response.ok) throw new Error('Помилка при відправці відгуку');
         const result = await response.json();
 
