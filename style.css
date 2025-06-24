@@ -440,11 +440,17 @@ footer {
     .product-card {
         width: 100%; /* або можна менше, наприклад 48% */
     }
+    .product-card img {
+        height: 140px;
+    }
 }
 
 @media (min-width: 992px) {
     .product-card {
         width: calc((100% - 40px) / 5); /* Три колонки з 20px відступами */
+    }
+    .product-card img {
+        height: 120px;
     }
 }
 
